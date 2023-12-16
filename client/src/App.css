@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(235, 224, 245);
+}
+.App{
+    margin: 20px 80px ;
+}
+.container{
+    height: 80px;
+    width: 1300px;
+    border: 0.5px solid;
+    margin: 18px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    /* margin-left: 70px; */
+    box-shadow: 10px 1px 6px 2px rgb(128, 126, 126);
+    position: relative;
+    border-radius: 10px;
+}
+.transaction-ammount{
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: 25px;
+
+}
+.change-cradintial-debitition{
+    font-size: 20px;
+    font-weight: 500;
+}
+.transaction-debit{
+    color: red;
+}
+.transaction-credit{
+    color: green;
+}
+.transaction-category{
+    position: absolute;
+     right: 15px;
+     font-weight: 600;
+}
+.description-text{
+    font-size: 18px;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+hr{
+    width: 1250px;
+}
+.creadit-debit-expenses{
+    font-size: 25px;
+    font-weight: 500;
+}

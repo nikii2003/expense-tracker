@@ -1,7 +1,10 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Transaction from "./models/Transaction.js";
+import { getApiHealth } from "./controlers/health.js";
+import { getApiTransaction, postApiTransaction } from "./controlers/transaction.js";
+import { postApiSignup , getApiSignup , getApiSignupID,postApiLogin } from "./controlers/user.js";
+
 
 dotenv.config();
 
@@ -12,44 +15,32 @@ const PORT = process.env.PORT || 5000;
 
 const connectDB = async () => {
   const conn = await mongoose.connect(process.env.MONGODB_URI);
+ try {
   if (conn) {
     console.log("mongodb connected");
   }
+ } catch (error) {
+   console.log(error.message)
+ }
 };
+
 connectDB();
 
-app.get("/api/health", (req, res) => {
-  res.json({
-    success: true,
-    message: "server is running !",
-  });
-});
+app.get("/api/health", getApiHealth);
 
-app.post('/api/transaction',async(req,res)=>{
-    const {ammount,type,description,category}=req.body
+app.post('/api/transaction',postApiTransaction)
 
-    const transaction = new Transaction ({
-        ammount,
-        type,
-        description,
-        category
-    })
-try {
-    
-    const savedTransaction = await transaction.save()
+app.get('/api/transaction', getApiTransaction)
 
-   return res.json({
-        success : true,
-        data:savedTransaction,
-        message : " transaction added successfully !"
-    })
-} catch (error) {
-    res.json({
-        success:false,
-        message:error.message
-    })
-}
-})
+app.post('/signup', postApiSignup)
+
+// app.get('/api/signup', getApiSignup)
+
+// app.get('/api/signup/:id', getApiSignupID)
+
+// app.put('/api/signup/:id')
+
+app.post('/login', postApiLogin)
 
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);

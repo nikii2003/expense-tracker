@@ -23,6 +23,10 @@ const TransactionSchema = new Schema(
         "shopping",
         "travel",
         "education",
+        "salary",
+        "freelancing",
+        "side-hussel",
+        "other"
       ],
       default: "other",
     },

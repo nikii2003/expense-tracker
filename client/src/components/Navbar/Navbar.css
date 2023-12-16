@@ -1,0 +1,35 @@
+.navbar-container{
+background-color: #c5c9c6;
+padding: 20px;
+
+}
+.Navbar-item{
+    display: flex;
+     justify-content: end;
+}
+.text-item{
+    color: black;
+    text-decoration: none;
+    margin-left: 30px;
+}
+.logo{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+   
+}
+.user-identify{
+    display: block;
+    margin-top: 14px;
+}
+.logout{
+    height: 50px;
+    color: blue;
+}
+.navbar-logout{
+    color: rgb(122, 31, 31);
+}
+.flex-container{
+    display: flex;
+    margin: 0px 10px;
+}
