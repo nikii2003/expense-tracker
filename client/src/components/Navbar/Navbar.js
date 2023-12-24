@@ -21,7 +21,9 @@ function Navbar() {
        
           <Link to="/login" className="text-item">Login</Link>
 
-          <Link to='/transaction' className="text-item">Transaction</Link>
+          <Link to='/addtransaction' className="text-item">Addtransaction</Link>
+       <Link to='/transactiondetail' className="text-item">Transaction</Link>
+       
           </div>
           <span className="user">Hello,{ user.name || "user!"}</span>
           {user?.name ? (

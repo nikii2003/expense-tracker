@@ -12,10 +12,10 @@ function Login() {
  const response = await axios.post('/login',{
   email : email,
   password : password
- })
+ }) 
  alert(response?.data?.message)
  if(response?.data?.success){
-  localStorage.getItem("user",JSON.stringify(response?.data?.data))
+  localStorage.setItem("user",JSON.stringify(response?.data?.data))
   window.location.href="/"
  }
   }

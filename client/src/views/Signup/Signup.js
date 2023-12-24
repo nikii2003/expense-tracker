@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
  export default function Signup() {
 
     useEffect(()=>{
-     const storageUser = JSON.parse(localStorage.getItem("user" || '{}'));
+     const storageUser = JSON.parse(localStorage.getItem("user") || `{}` );
      if(storageUser?.email){
         alert("you already register here!");
         window.location.href="/"

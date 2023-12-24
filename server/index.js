@@ -2,8 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import { getApiHealth } from "./controlers/health.js";
-import { getApiTransaction, postApiTransaction } from "./controlers/transaction.js";
+import { getApiTransaction, postApiTransaction, deleteApiTransaction} from "./controlers/transaction.js";
 import { postApiSignup , getApiSignup , getApiSignupID,postApiLogin } from "./controlers/user.js";
+import Transaction from "./models/Transaction.js";
 
 
 dotenv.config();
@@ -39,8 +40,10 @@ app.post('/signup', postApiSignup)
 // app.get('/api/signup/:id', getApiSignupID)
 
 // app.put('/api/signup/:id')
-
 app.post('/login', postApiLogin)
+
+app.delete('/api/transaction/:_id',deleteApiTransaction)
+
 
 app.listen(PORT, () => {
   console.log(`server is running on ${PORT}`);

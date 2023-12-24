@@ -63,11 +63,12 @@ function Transaction() {
           type,
           category,
           createdAT,
+         
           updatedAT,
         } = transaction;
 
         const date = new Date(createdAT).toLocaleDateString();
-        const time = new Date(createdAT).toLocaleDateString();
+        const time = new Date(createdAT).toLocaleTimeString();
         return (
           <div key={index} className="container">
             <span
@@ -86,9 +87,12 @@ function Transaction() {
               <hr/>
           <span className="description-text">{ description}</span>
           </div>
+
+          
         );
       })}
     </div>
+    
     </>
   );
 }

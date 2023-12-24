@@ -6,7 +6,7 @@ body{
 }
 .container{
     height: 80px;
-    width: 1150px;
+    width: 900px;
     border: 0.5px solid;
     margin: 18px;
     padding-top: 10px;
@@ -43,9 +43,12 @@ body{
     padding-left: 10px;
 }
 hr{
-    width: 100px;
+    width: 890px;
 }
 .creadit-debit-expenses{
     font-size: 25px;
     font-weight: 500;
+}
+.all-credit-debit-expenses-div{
+    display: flex;
 }

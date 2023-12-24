@@ -2,7 +2,7 @@ import { Schema, model } from "mongoose";
 
 const TransactionSchema = new Schema(
   {
-    ammount: {
+    amount: {
       type: Number,
       required: true,
     },
@@ -14,13 +14,16 @@ const TransactionSchema = new Schema(
     description: {
       type: String,
     },
+    date :{
+      type : Date,
+    },
     category: {
       type: String,
       enum: [
         "food",
         "entertainment",
         "rent",
-        "shopping",
+        "shooping",
         "travel",
         "education",
         "salary",

@@ -4,8 +4,11 @@ import {BrowserRouter,RouterProvider, createBrowserRouter} from 'react-router-do
 import Home from './views/Home/Home';
 import Signup from './views/Signup/Signup';
 import Login from './views/Login/Login';
-import Transaction from './views/Transaction/Transaction';
-
+import AddTransaction from './views/AddTransaction/AddTransaction';
+import TransactionDetails from './views/TransactionDetails/TransactionDetails.js';
+import Debit from './views/Debit/Debit.js';
+import Credit from './views/Credit/Credit.js';
+import AllTransaction from './views/AllTransaction/AllTransaction.js'
 
 const router =createBrowserRouter ([{
     path : "/",
@@ -20,9 +23,27 @@ const router =createBrowserRouter ([{
   element : <Login/>
 },
 {
-  path :"/transaction",
-  element : <Transaction/>
-}]
+  path :"/addtransaction",
+  element : <AddTransaction/>
+},
+{
+  path : "/transactiondetail",
+  element : <TransactionDetails/>
+},
+{
+  path : "/debit",
+  element : <Debit/>
+},
+{
+  path : "/credit",
+  element : <Credit/>
+},
+{
+  path : '/alltransaction',
+  element : <AllTransaction/>
+}
+
+]
 
 )
 

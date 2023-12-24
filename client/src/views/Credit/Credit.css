@@ -1,0 +1,10 @@
+.flex-div-credit-container{
+    display: flex;
+}
+.delete-Transaction{
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(9, 16, 75);
+}

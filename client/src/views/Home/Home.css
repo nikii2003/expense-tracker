@@ -1,0 +1,15 @@
+.image-div{
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    color: black;
+    position: relative;
+  
+}
+.slogans{
+    position: absolute;
+    font-size: 60px;
+     margin-left: 10px;
+}

@@ -1,20 +1,22 @@
+
 body{
     background-color: rgb(235, 224, 245);
 }
-.App{
-    margin: 20px 80px ;
+.transaction-container-main-div{
+    display: flex;  
 }
+
 .container{
     height: 80px;
-    width: 1150px;
+    width: 1000px;
     border: 0.5px solid;
-    margin: 18px;
     padding-top: 10px;
-    padding-bottom: 20px;
-    /* margin-left: 70px; */
+    padding-bottom: 30px;
+    background-color: white;
     box-shadow: 10px 1px 6px 2px rgb(128, 126, 126);
     position: relative;
     border-radius: 10px;
+    margin-bottom: 15px;
 }
 .transaction-ammount{
     font-weight: bold;
@@ -25,6 +27,7 @@ body{
 .change-cradintial-debitition{
     font-size: 20px;
     font-weight: 500;
+    
 }
 .transaction-debit{
     color: red;
@@ -48,4 +51,29 @@ hr{
 .creadit-debit-expenses{
     font-size: 25px;
     font-weight: 500;
+    margin-left: 50px;
+}
+.delete-Transaction{
+    position: absolute;
+    right: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(9, 16, 75);
+}
+.side-navbar-div{
+    height: 600px;
+    width: 200px;
+    background-color: rgb(9, 16, 75);
+    position: relative;
+    top: -19px;
+    
+}
+.side-navbar-items{
+   text-align: center;
+    background-color: #c5c9c6;
+    cursor: pointer;
+   
+}
+.text-decore{
+ text-decoration: none;
 }

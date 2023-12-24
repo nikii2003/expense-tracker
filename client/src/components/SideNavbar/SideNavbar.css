@@ -1,0 +1,18 @@
+.side-navbar-div{
+    height: 600px;
+    width: 200px;
+    background-color: rgb(9, 16, 75);
+    position: relative;
+    /* top: -19px; */
+   
+    
+}
+.side-navbar-items{
+   padding-top: 10px;
+   text-align: center;
+    background-color: #c5c9c6;
+    cursor: pointer;   
+}
+.text-decore{
+ text-decoration: none;
+}

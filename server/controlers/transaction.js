@@ -1,12 +1,13 @@
 import Transaction from "./../models/Transaction.js"
 import { responder } from "../util.js"
 const postApiTransaction = async(req,res)=>{
-    const {ammount,type,description,category}=req.body
+    const {amount,type,description,category,date}=req.body
 
     const transaction = new Transaction ({
-        ammount,
+        amount,
         type,
         description,
+        date,
         category
     })
 try {
@@ -43,6 +44,20 @@ const getApiTransaction = async (req,res)=>{
     
   }
 
+const deleteApiTransaction = async (req,res)=>{
+   
+    const {_id}=req.params;
+
+    await Transaction.deleteOne({_id : _id})
+
+    res.json({
+        success : false,
+        message : "Transaction Deleted Successfully !"
+
+    })
+
+}  
 
 
-export {postApiTransaction , getApiTransaction}
+
+export {postApiTransaction , getApiTransaction ,deleteApiTransaction}

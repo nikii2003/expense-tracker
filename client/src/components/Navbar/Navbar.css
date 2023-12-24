@@ -5,7 +5,7 @@ padding: 20px;
 }
 .Navbar-item{
     display: flex;
-     justify-content: end;
+     
 }
 .text-item{
     color: black;
@@ -16,7 +16,7 @@ padding: 20px;
     font-weight: bold;
     text-decoration: none;
     font-size: 20px;
-   
+    color: rgb(17, 17, 85);
 }
 .user-identify{
     display: block;
@@ -24,7 +24,19 @@ padding: 20px;
 }
 .logout{
     height: 50px;
-    color: blue;
+    color: rgb(100, 100, 219);
+    position: relative;
+    margin-left: 600px;
+    border: 1px solid;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 2px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.logout:hover{
+    color: rgb(17, 17, 85);
 }
 .navbar-logout{
     color: rgb(122, 31, 31);
